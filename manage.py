@@ -9,8 +9,8 @@ from salary.models import db, User
 
 # default to dev config because no one should use this in
 # production anyway
-env = os.environ.get('WAGES_ENV', 'dev')
-app = create_app('salary.settings.%sConfig' % env.capitalize())
+env = os.environ.get('SALARY_ENV', 'development')
+app = create_app('salary.settings.%s' % env.capitalize())
 
 manager = Manager(app)
 manager.add_command("server", Server())

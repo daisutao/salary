@@ -13,8 +13,8 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'sqlite:///../database.db'
 
 
-class DevConfig(Config):
-    ENV = 'dev'
+class Development(Config):
+    ENV = 'development'
     DEBUG = True
     DEBUG_TB_INTERCEPT_REDIRECTS = False
 
